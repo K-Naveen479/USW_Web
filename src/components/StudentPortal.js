@@ -165,7 +165,7 @@ const StudentPortal = () => {
             checked={agreeMarketing}
             onChange={(e) => setAgreeMarketing(e.target.checked)}
           />
-          Do you agree to receive marketing updates?
+           Do you agree to receive marketing updates?
         </label>
         <br />
         <label>
@@ -174,7 +174,7 @@ const StudentPortal = () => {
             checked={agreeCorrespoding}
             onChange={(e) => setAgreeCorrespoding(e.target.checked)}
           />
-          Do you want correspondence in Welsh?
+           Do you want correspondence in Welsh?
         </label>
         <br />
         <button className='bg-red-500 text-white p-2 rounded' type="submit" onClick={handleSubmit}>Submit</button>

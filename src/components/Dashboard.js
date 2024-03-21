@@ -58,6 +58,18 @@ const Dashboard = () => {
             });
     };
 
+    console.log("user",users)
+
+    const categorizedData = users.reduce((acc, obj) => {
+        const { subject_area } = obj;
+        if (!acc[subject_area]) {
+            acc[subject_area] = [];
+        }
+        acc[subject_area].push(obj);
+        return acc;
+    }, {});
+    
+    console.log("categorizedData",categorizedData);
 
 
     return (
@@ -65,61 +77,65 @@ const Dashboard = () => {
             <div className="title">
                 <h2 className="text-gray-700 text-3xl mt-5 font-bold">List of Submissions</h2>
             </div>
-
-            <div className='flex flex-row justify-center mr-5'>
+    
+            <div className='flex flex-row justify-center mr-5 mb-4'>
                 <button onClick={handleAction} className="text-red-500 flex items-center">
                     <span className='text-red text-xl font-bold'>Add a form</span>
                     <CiCirclePlus className="w-5 h-5 ml-1" />
                 </button>
             </div>
-
+    
             <div className="user-list">
-                {users.map((user) => (
-                    <div className='flex flex-row w-full items-center justify-center'>
-                        <div className="border border-1 border-gray-300 rounded bg-gray-100 px-3 py-2 m-5 shadow shadow-md" style={{ width: "50em" }} key={user.id}>
-                        <div className='flex flex-row justify-center mr-5'>
-                                <div><strong>{user.subject_area}</strong></div>
-                            </div>
+    {Object.entries(categorizedData).map(([category, subjects]) => {
+        return (
+            <div key={category}>
+                <div className='flex text-gray-800 font-bold text-xl justify-center mt-3'>{category}</div>
+                {subjects.map((subject) => (
+                    <div className='flex flex-row w-full items-center justify-center' key={subject.id}>
+                        <div className="border border-1 border-gray-300 rounded bg-gray-100 px-3 py-2 m-5 shadow shadow-md" style={{ width: "50em" }}>
                             <div className='flex flex-row justify-between px-3 py-2'>
                                 <div><strong>Full Name:</strong></div>
-                                <div>{user.full_name}</div>
+                                <div>{subject.full_name}</div>
                             </div>
                             <div className='flex flex-row justify-between px-3 py-2'>
                                 <div><strong>Email:</strong></div>
-                                <div>{user.email}</div>
+                                <div>{subject.email}</div>
                             </div>
                             <div className='flex flex-row justify-between px-3 py-2'>
                                 <div><strong>Date of birth:</strong></div>
-                                <div>{user.date_of_birth}</div>
+                                <div>{subject.date_of_birth}</div>
                             </div>
                             <div className='flex flex-row justify-between px-3 py-2'>
                                 <div> <strong>Location:</strong></div>
-                                <div>{user.gps_location}</div>
+                                <div>{subject.gps_location}</div>
                             </div>
                             <div className='flex flex-row justify-between px-3 py-2'>
                                 <div><strong>Area of Interest:</strong></div>
-                                <div>{user.subject_area}</div>
+                                <div>{subject.subject_area}</div>
                             </div>
                             <div className='flex flex-row justify-between px-3 py-2'>
                                 <div><strong>Agreed Marketing:</strong></div>
-                                <div>{user.marketing_updates ? "Yes" : "No"}</div>
+                                <div className={`font-semibold ${subject.marketing_updates ? "text-green-600" : "text-red-600"}`}>{subject.marketing_updates ? "Yes" : "No"}</div>
                             </div>
                             <div className='flex flex-row justify-between px-3 py-2'>
                                 <div><strong>Agreed correspondence:</strong></div>
-                                <div>{user.correspondence_in_welsh ? "Yes" : "No"}</div>
+                                <div className={`font-semibold ${subject.correspondence_in_welsh ? "text-green-600" : "text-red-600"}`}>{subject.correspondence_in_welsh ? "Yes" : "No"}</div>
                             </div>
                         </div>
                         <div className=''>
-                            <button onClick={() => handleDelete(user.id)} className="text-red-500">
+                            <button onClick={() => handleDelete(subject.id)} className="text-red-500">
                                 <AiFillDelete className="w-8 h-8" />
                             </button>
                         </div>
-
                     </div>
                 ))}
             </div>
+        );
+    })}
+</div>
+
         </div>
-    );
+    );    
 };
 
 export default Dashboard;
