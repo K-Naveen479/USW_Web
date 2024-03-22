@@ -16,7 +16,6 @@ Follow these steps to run the project on your local machine:
    git clone https://github.com/K-Naveen479/USW_web.git
 
 ### Navigate to the project directory:
-   ```bash
     cd USW_web
 
 ### Install dependencies:
