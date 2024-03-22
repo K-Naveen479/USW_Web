@@ -20,15 +20,15 @@ Follow these steps to run the project on your local machine:
 
 ### Install dependencies:
 **If using npm:**
-    npm install
+- npm install
 **If using yarn:**
-    yarn install
+- yarn install
 
 ### Start the development server:
 **If using npm:**
-      npm start
+- npm start
 **If using yarn:**
-      yarn start
+- yarn start
 
 ### Admin Pin:
 1234
