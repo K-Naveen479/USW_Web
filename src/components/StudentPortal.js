@@ -8,7 +8,7 @@ const StudentPortal = () => {
   const [dob, setDob] = useState('');
   const [agreeMarketing, setAgreeMarketing] = useState(false);
   const [agreeCorrespoding, setAgreeCorrespoding] = useState(false);
-  const [areaOfInterest, setAreaOfInterest] = useState('developer');
+  const [areaOfInterest, setAreaOfInterest] = useState('');
   const [currentLocation, setCurrentLocation] = useState(null);
   const navigate = useNavigate();
 
@@ -54,6 +54,9 @@ const StudentPortal = () => {
       return;
     } else if(!dob) {
       alert('Please fill the date of birth');
+      return
+    } else if(!areaOfInterest) {
+      alert('Please select the area of interest');
       return
     }
   
