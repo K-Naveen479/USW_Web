@@ -16,18 +16,19 @@ Follow these steps to run the project on your local machine:
    git clone https://github.com/K-Naveen479/USW_web.git
 
 ### Navigate to the project directory:
-cd USW_web
+   ```bash
+    cd USW_web
 
 ### Install dependencies:
-If using npm:
-      npm install
-If using yarn:
-      yarn install
+**If using npm:**
+    npm install
+**If using yarn:**
+    yarn install
 
 ### Start the development server:
-If using npm:
+**If using npm:**
       npm start
-If using yarn:
+**If using yarn:**
       yarn start
 
 ### Admin Pin:
