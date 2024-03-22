@@ -80,7 +80,7 @@ const StudentPortal = () => {
     };
   
 
-    fetch('http://localhost:3000/prospects', {
+    fetch('https://usw-backend-0b64bd4de9c8.herokuapp.com/prospects', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

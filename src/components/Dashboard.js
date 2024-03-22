@@ -12,7 +12,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:3000/prospects');
+                const response = await fetch('https://usw-backend-0b64bd4de9c8.herokuapp.com/prospects');
                 if (!response.ok) {
                     console.log("records:", data)
                     throw new Error('Failed to fetch data');
@@ -31,7 +31,7 @@ const Dashboard = () => {
     };
 
     const handleDelete = (userId) => {
-        fetch(`http://localhost:3000/prospects/${userId}`, {
+        fetch(`https://usw-backend-0b64bd4de9c8.herokuapp.com/prospects/${userId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
