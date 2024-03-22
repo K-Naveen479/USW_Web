@@ -6,7 +6,7 @@ This project is an admin website developed using React and other technologies, a
 ## Prerequisites
 - Node.js installed on your machine
 - npm or yarn package manager
-- Visual Studio Code (or any other text editor/IDE of your choice)
+- Visual Studio Code 
 
 ## Getting Started
 
