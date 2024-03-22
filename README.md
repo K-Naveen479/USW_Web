@@ -19,16 +19,21 @@ Follow these steps to run the project on your local machine:
     cd USW_web
 
 ### Install dependencies:
-**If using npm:**
-- npm install
-**If using yarn:**
-- yarn install
+**If using npm:**  
+- npm install  
+**If using yarn:**  
+- yarn install  
 
 ### Start the development server:
-**If using npm:**
-- npm start
-**If using yarn:**
-- yarn start
+**If using npm:**  
+- npm start  
+**If using yarn:**  
+- yarn start  
+
+## Netlify Build:
+Uploaded the build in netlify so we can access the build through this link
+https://65fdbef854edec395b951895--merry-stroopwafel-f4983c.netlify.app/
 
 ### Admin Pin:
 1234
+
