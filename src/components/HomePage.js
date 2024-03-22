@@ -25,7 +25,8 @@ const HomePage = () => {
         <h2 className='font-bold text-center'>Welcome to</h2>
         <h1 className="text-red-500 text-xl mb-4 font-bold text-center">University of South Wales</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
-            <input type="password" placeholder="     Please Enter The Admin Pin To Proceed" value={pin} onChange={handleChange} className="input" required />
+            <input type="password" placeholder="  Please Enter The Admin Pin To Proceed" value={pin} onChange={handleChange} className="input border-gray-400 border-2 rounded-md" required />
+            <p className='font-regular text-gray-400'>Password Hint:1234</p>
             <button className="bg-red-500 text-white p-2 rounded" type="submit">Login</button>
         </form>
         </div>
