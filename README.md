@@ -9,6 +9,11 @@ This project is an admin website developed using React and other technologies, a
 - Visual Studio Code (or any other text editor/IDE of your choice)
 
 ## Getting Started
+
+## Netlify Build:
+Uploaded the build in Netlify so we can access the build through this link:  
+https://65fdbef854edec395b951895--merry-stroopwafel-f4983c.netlify.app/
+
 Follow these steps to run the project on your local machine:
 
 1. **Clone the repository:**
@@ -29,10 +34,6 @@ Follow these steps to run the project on your local machine:
 - npm start  
 **If using yarn:**  
 - yarn start  
-
-## Netlify Build:
-Uploaded the build in netlify so we can access the build through this link
-https://65fdbef854edec395b951895--merry-stroopwafel-f4983c.netlify.app/
 
 ### Admin Pin:
 1234
